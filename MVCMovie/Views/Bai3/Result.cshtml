@@ -1,0 +1,14 @@
+@model MvcApp.Models.Bai3
+
+@{
+    ViewData["Title"] = "Kết quả BMI";
+}
+
+<h2>Kết quả BMI</h2>
+
+<p>Cân nặng: <strong>@Model.CanNang</strong> kg</p>
+<p>Chiều cao: <strong>@Model.ChieuCao</strong> m</p>
+<p>BMI: <strong>@Model.BMI.ToString("0.00")</strong></p>
+<p>Phân loại: <strong>@Model.PhanLoai</strong></p>
+
+<a asp-action="Index">Quay lại</a>

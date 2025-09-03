@@ -1,0 +1,28 @@
+@model MvcApp.Models.Bai2
+
+@{
+    ViewData["Title"] = "Bài 2 - Máy tính đơn giản";
+}
+
+<h2>Máy tính đơn giản</h2>
+
+<form asp-action="Index" method="post">
+    <div>
+        <label>Số A:</label>
+        <input asp-for="SoA" type="number" step="any" required />
+    </div>
+    <div>
+        <label>Số B:</label>
+        <input asp-for="SoB" type="number" step="any" required />
+    </div>
+    <div>
+        <label>Phép tính:</label>
+        <select asp-for="PhepTinh">
+            <option value="Tong">Tổng</option>
+            <option value="Hieu">Hiệu</option>
+            <option value="Tich">Tích</option>
+            <option value="Thuong">Thương</option>
+        </select>
+    </div>
+    <button type="submit">Tính</button>
+</form>
