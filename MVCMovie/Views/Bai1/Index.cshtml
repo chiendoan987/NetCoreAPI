@@ -1,0 +1,19 @@
+@model MvcApp.Models.Bai1
+
+@{
+    ViewData["Title"] = "Bài 1 - Nhập thông tin";
+}
+
+<h2>Nhập thông tin cá nhân</h2>
+
+<form asp-action="Index" method="post">
+    <div>
+        <label>Họ tên:</label>
+        <input asp-for="HoTen" required />
+    </div>
+    <div>
+        <label>Năm sinh:</label>
+        <input asp-for="NamSinh" type="number" required />
+    </div>
+    <button type="submit">Xem kết quả</button>
+</form>
