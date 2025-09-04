@@ -1,4 +1,6 @@
+using System.Net;
 using Microsoft.AspNetCore.Mvc;
+using YourNamespace.Models;
 
 namespace YourProject.Controllers
 {
@@ -6,14 +8,15 @@ namespace YourProject.Controllers
     {
         public IActionResult Index()
         {
-            ViewBag.Message = "Đây là trang Index của Person";
             return View();
         }
-
-        public IActionResult Detail()
+        [HttpPost]
+        public IActionResult Index(Person ps)
         {
-            ViewBag.Message = "Đây là trang Detail của Person";
+            string strOutput = "Xin Chào" + ps.PersonId + "_" + ps.FullName + "_" + ps.Address;
+            ViewBag.infoPerson = strOutput;
             return View();
+
         }
     }
 }
