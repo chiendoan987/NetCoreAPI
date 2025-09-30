@@ -1,4 +1,4 @@
-namespace YourNamespace.Models
+namespace MvcMovie.Models
 {
     public class Employee : Person
     {
